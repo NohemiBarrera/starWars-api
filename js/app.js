@@ -19,7 +19,7 @@ var cargarPersonajes = function(){
 	});
 };
 
-var mostrarTotalPersonajes = function(){
+var mostrarTotalPersonajes = function(total){
 	$("#total").text(total);
 }
 
