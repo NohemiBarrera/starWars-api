@@ -4,7 +4,7 @@ var cargarPagina = function (){
 };
 
 var cargarPersonajes = function(){
-	var url = 'http://swapi.co/api/people/';
+	var url = 'https://swapi.co/api/people/';
 	$.getJSON(url, function(response){
 		var personajes =response.results;
 		var total = response.count;
