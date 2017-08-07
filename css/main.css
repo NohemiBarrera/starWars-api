@@ -1,0 +1,27 @@
+body{
+	background-image: url(../img/stars.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+*{
+	color: white;
+	font-size: 1.2rem;
+}
+#personajes{
+	list-style: none;
+}
+#personajes>li.personaje:hover{
+	color: yellow;
+	cursor: pointer;
+}
+#star-wars-logo{
+	padding: 20px;
+	width: 250px;
+	height: 150px;
+}
+#logo{
+	text-align: center;
+}
+#totalPersonajes{
+	color: white;
+}

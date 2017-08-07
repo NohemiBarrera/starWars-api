@@ -4,7 +4,7 @@ var cargarPagina = function (){
 };
 
 var cargarPersonajes = function(){
-	var url = 'http://swapi.co/api/people/';
+	var url = 'https://swapi.co/api/people/?page=2';
 	$.getJSON(url, function(response){
 		var personajes =response.results;
 		var total = response.count;
@@ -24,13 +24,13 @@ var mostrarPersonajes = function(personajes){
 				var $li = $("<li />");    //crea un elemento li
 				$li.addClass("personaje");
 				$li.attr("data-url", personaje.homeworld);   //le da el atributo de dat-url a cada personaje
-				$li.text(personaje.name + " - " + personaje.height + " cm");   //crea un elemento li para cada nombre de personaje
+				$li.text(personaje.name + " - " + personaje.birth_year + " - " + personaje.gender);   //crea un elemento li para cada nombre de personaje
 				$ul.append($li);   //agrega cada personaje a la lista
 				//console.log(personaje.name);  //obtenemos sólo el nombre de los personajes
 			});
 		};
 
-		var plantillaPlaneta = '<h2>Planeta</h2>' +
+		var plantillaPlaneta = '<h5>Planeta</h5>' +
 		'<p><strong>Nombre: </strong> **nombre**</p>' +
 		'<p><strong>Clima: </strong> **clima**</p>';
 
